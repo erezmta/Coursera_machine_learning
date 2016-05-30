@@ -62,8 +62,10 @@ load('ex3weights.mat');
 
 pred = predict(Theta1, Theta2, X);
 
+% accuracy = (pred == y)(1:30,:);
+% fprintf('Training Set Accuracy: %f\n', accuracy ) ;
 fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);
-
+% fprintf('\n Hi !!!! \n');
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
@@ -73,7 +75,7 @@ pause;
 %  Randomly permute examples
 rp = randperm(m);
 
-for i = 1:m
+for i = 1:1
     % Display 
     fprintf('\nDisplaying Example Image\n');
     displayData(X(rp(i), :));
